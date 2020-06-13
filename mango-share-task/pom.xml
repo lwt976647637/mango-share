@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.mango</groupId>
+		<artifactId>mango-share</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.mango</groupId>
+	<artifactId>mango-share-task</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>mango-task</name>
+	<packaging>jar</packaging>
+	<description></description>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.mango</groupId>
+			<artifactId>mango-share-remote</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mango</groupId>
+			<artifactId>mango-share-core</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!-- druid配置 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.0.31</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.qudian.task.QudianTaskApplication</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+						<configuration>
+							<classifier>exec</classifier>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<!--		<resources>-->
+		<!--			<resource>-->
+		<!--				<directory>${env}/</directory>-->
+		<!--				<filtering>true</filtering>-->
+		<!--			</resource>-->
+		<!--			<resource>-->
+		<!--				<directory>src/main/resources</directory>-->
+		<!--				<filtering>false</filtering>-->
+		<!--				<excludes>-->
+		<!--					<exclude>/META-INF/app.properties</exclude>-->
+		<!--					<exclude>/META-INF/cat/client.xml</exclude>-->
+		<!--				</excludes>-->
+		<!--			</resource>-->
+		<!--		</resources>-->
+	</build>
+
+</project>
