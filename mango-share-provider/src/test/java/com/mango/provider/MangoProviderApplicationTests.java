@@ -27,8 +27,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = QudianProviderApplication.class)
-public class QudianProviderApplicationTests {
+@SpringBootTest(classes = MangoProviderApplication.class)
+public class MangoProviderApplicationTests {
 
     @Autowired
     private HomePageService homePageService;

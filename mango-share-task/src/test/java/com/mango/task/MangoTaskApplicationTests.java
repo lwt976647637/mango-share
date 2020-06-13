@@ -10,8 +10,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.io.IOException;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = QudianTaskApplication.class)
-public class QudianTaskApplicationTests {
+@SpringBootTest(classes = MangoTaskApplication.class)
+public class MangoTaskApplicationTests {
 
 	@Autowired
 	private BlogsService blogsService;

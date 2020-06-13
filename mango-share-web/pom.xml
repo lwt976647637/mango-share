@@ -13,6 +13,17 @@
 
 
     <dependencies>
+        <!--引入thymeleaf依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.nekohtml</groupId>
+            <artifactId>nekohtml</artifactId>
+            <version>1.9.21</version>
+        </dependency>
         <dependency>
             <groupId>com.mango</groupId>
             <artifactId>mango-share-core</artifactId>
@@ -21,6 +32,16 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <!-- druid配置 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.31</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
@@ -37,6 +58,23 @@
     </dependencies>
 
     <build>
+        <!-- 配置将哪些资源文件(静态文件/模板文件/mapper文件)加载到tomcat输出目录里 -->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory><!--java文件的路径-->
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <!-- <filtering>false</filtering>-->
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory><!--资源文件的路径-->
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+                <!-- <filtering>false</filtering>-->
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -63,20 +101,8 @@
                 </executions>
             </plugin>
         </plugins>
-        <!--		<resources>-->
-        <!--			<resource>-->
-        <!--				<directory>${env}/</directory>-->
-        <!--				<filtering>true</filtering>-->
-        <!--			</resource>-->
-        <!--			<resource>-->
-        <!--				<directory>src/main/resources</directory>-->
-        <!--				<filtering>false</filtering>-->
-        <!--				<excludes>-->
-        <!--					<exclude>/META-INF/app.properties</exclude>-->
-        <!--					<exclude>/META-INF/cat/client.xml</exclude>-->
-        <!--				</excludes>-->
-        <!--			</resource>-->
-        <!--		</resources>-->
+
+
     </build>
 
 </project>
