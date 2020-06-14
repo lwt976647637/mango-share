@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mango</groupId>
+	<artifactId>mango-share</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>mango-share</name>
+	<description>趣点小说父工程</description>
+	<packaging>pom</packaging>
+	<modules>
+		<module>mango-share-core</module>
+		<module>mango-share-remote</module>
+		<module>mango-share-provider</module>
+		<module>mango-share-rest</module>
+		<module>mango-share-task</module>
+		<module>mango-share-web</module>
+	</modules>
+
+	<properties>
+		<platform.version>2.6.0-RELEASE</platform.version>
+		<java.version>1.7</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<platform.version>2.6.0-RELEASE</platform.version>
+		<data-framework.version>2.8.0-RELEASE</data-framework.version>
+		<trace-dubbo-agent>1.0.1.RELEASE</trace-dubbo-agent>
+		<rbac.version>6.15.4-RELEASE</rbac.version>
+		<bfeature-remote.version>1.8.3-SNAPSHOT</bfeature-remote.version>
+		<fans-growing-remote.version>4.1.2-SNAPSHOT</fans-growing-remote.version>
+		<store-fansgrowing.version>1.3.9-SNAPSHOT</store-fansgrowing.version>
+		<el-shop-emall.version>1.8.2-SNAPSHOT</el-shop-emall.version>
+		<org.projectlombok.version>1.16.22</org.projectlombok.version>
+		<fastjson.version>1.2.30</fastjson.version>
+		<jackson.version>2.9.0</jackson.version>
+		<springfox-swagger.version>2.6.1</springfox-swagger.version>
+		<redis-lock.version>1.0.4.RELEASE</redis-lock.version>
+	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+	</parent>
+
+	<dependencies>
+
+	</dependencies>
+
+
+<!--	<distributionManagement>-->
+<!--		<repository>-->
+<!--			<id>maven-releases</id>-->
+<!--			<name>Nexus Release Repository</name>-->
+<!--			<url>http://192.168.100.147:8081/repository/maven-releases/</url>-->
+<!--		</repository>-->
+<!--		<snapshotRepository>-->
+<!--			<id>maven-snapshots</id>-->
+<!--			<name>Nexus Snapshot Repository</name>-->
+<!--			<url>http://192.168.100.147:8081/repository/maven-snapshots/</url>-->
+<!--		</snapshotRepository>-->
+<!--	</distributionManagement>-->
+<!--	<repositories>-->
+<!--		<repository>-->
+<!--			<id>maven-public</id>-->
+<!--			<url>http://192.168.100.147:8081/repository/maven-public/</url>-->
+<!--		</repository>-->
+<!--	</repositories>-->
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<configuration>
+					<show>private</show>
+					<nohelp>true</nohelp>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+<!--	<profiles>-->
+<!--		<profile>-->
+<!--			<id>local</id>-->
+<!--		</profile>-->
+<!--		<profile>-->
+<!--			<id>dev</id>-->
+<!--			<properties>-->
+<!--				<env>doc/dev</env>-->
+<!--			</properties>-->
+<!--			<activation>-->
+<!--				<activeByDefault>true</activeByDefault>-->
+<!--			</activation>-->
+<!--		</profile>-->
+<!--		<profile>-->
+<!--			<id>test</id>-->
+<!--			<properties>-->
+<!--				<env>doc/test</env>-->
+<!--			</properties>-->
+<!--		</profile>-->
+<!--		<profile>-->
+<!--			<id>uat</id>-->
+<!--			<properties>-->
+<!--				<env>doc/uat</env>-->
+<!--			</properties>-->
+<!--		</profile>-->
+<!--		<profile>-->
+<!--			<id>prod</id>-->
+<!--			<properties>-->
+<!--				<env>doc/prod</env>-->
+<!--			</properties>-->
+<!--		</profile>-->
+<!--	</profiles>-->
+
+</project>
